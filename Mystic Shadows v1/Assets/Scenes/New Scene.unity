@@ -703,6 +703,8 @@ MonoBehaviour:
     m_Bits: 8
   jumpForce: 45
   jumpBufferFrames: 8
+  coyoteTime: 0.1
+  maxAirJumps: 1
 --- !u!95 &1765648679
 Animator:
   serializedVersion: 5

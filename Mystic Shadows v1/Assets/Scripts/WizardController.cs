@@ -9,17 +9,24 @@ public class WizardController : MonoBehaviour
     [Header("Horizontal Movement Settings: ")]
     [SerializeField] private float walkSpeed = 20f;
     private float xAxis;
+    [Space(5)]
 
     [Header("Ground Check Settings: ")]
     [SerializeField] private Transform groundCheckPoint;
     [SerializeField] private float groundCheckY = 0.2f;
     [SerializeField] private float groundCheckX = 0.5f;
     [SerializeField] private LayerMask wheresGround;
+    [Space(5)]
 
     [Header("Jump Settings: ")]
     [SerializeField]private float jumpForce = 45f;
     [SerializeField] private int jumpBufferFrames;
-    private int jumpBufferCounter = 0;
+    private float jumpBufferCounter = 0;
+    private float coyoteTimeCounter = 0;
+    [SerializeField] private float coyoteTime;
+    private int airJumpCounter = 0;
+    [SerializeField] private int maxAirJumps;
+    [Space(5)]
 
     private Rigidbody2D rb;
     Animator anim;
@@ -113,12 +120,19 @@ public class WizardController : MonoBehaviour
             pState.jumping = false;
      
         }
+
         if (!pState.jumping)
         {
-            if (jumpBufferCounter > 0 && Grounded())
+            if (jumpBufferCounter > 0 && coyoteTimeCounter > 0)
             {
                 rb.velocity = new Vector3(rb.velocity.x, jumpForce);
                 pState.jumping = true;
+            }
+            else if(!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
+            {
+                pState.jumping = true;
+                airJumpCounter++;
+                rb.velocity = new Vector3(rb.velocity.x, jumpForce);
             }
         }
 
@@ -131,7 +145,14 @@ public class WizardController : MonoBehaviour
         if (Grounded())
         {
             pState.jumping = false;
+            coyoteTimeCounter = coyoteTime;
+            airJumpCounter = 0;
         }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -139,7 +160,7 @@ public class WizardController : MonoBehaviour
         }
         else
         {
-            jumpBufferCounter--;
+            jumpBufferCounter = jumpBufferCounter - Time.deltaTime * 10;
         }
     }
 

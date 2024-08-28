@@ -19,7 +19,7 @@ public class WizardController : MonoBehaviour
     [Space(5)]
 
     [Header("Jump Settings: ")]
-    [SerializeField]private float jumpForce = 45f;
+    [SerializeField] private float jumpForce = 45f;
     [SerializeField] private int jumpBufferFrames;
     private float jumpBufferCounter = 0;
     private float coyoteTimeCounter = 0;
@@ -45,7 +45,7 @@ public class WizardController : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null && instance != this)
+        if (instance != null && instance != this)
         {
             Destroy(gameObject);
         }
@@ -58,7 +58,7 @@ public class WizardController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pState = GetComponent<WizardStateList>();   
+        pState = GetComponent<WizardStateList>();
 
         anim = GetComponent<Animator>();
 
@@ -76,12 +76,13 @@ public class WizardController : MonoBehaviour
     {
         GetInputs();
         UpdateJumpVariable();
-        if(pState.dashing) return;
+
+        if (pState.dashing) return;
         Flip();
         Move();
         Jump();
         StartDash();
-        
+
     }
 
     // Get the inputs of the game
@@ -97,11 +98,11 @@ public class WizardController : MonoBehaviour
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
         }
-        else if ( xAxis > 0) 
+        else if (xAxis > 0)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
         }
-  
+
     }
 
 
@@ -109,12 +110,12 @@ public class WizardController : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(walkSpeed * xAxis, rb.velocity.y);
-        anim.SetBool("Walking", rb.velocity.x != 0 && Grounded()); 
+        anim.SetBool("Walking", rb.velocity.x != 0 && Grounded());
     }
 
     void StartDash()
     {
-        if(Input.GetButtonDown("Dash") && ableDash && !dashed)
+        if (Input.GetButtonDown("Dash") && ableDash && !dashed)
         {
             StartCoroutine(Dash());
             dashed = true;
@@ -163,7 +164,7 @@ public class WizardController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             pState.jumping = false;
-     
+
         }
 
         if (!pState.jumping)
@@ -172,8 +173,9 @@ public class WizardController : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 pState.jumping = true;
+                jumpBufferCounter = 0;
             }
-            else if(!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
+            else if (!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
             {
                 pState.jumping = true;
                 airJumpCounter++;
@@ -192,6 +194,7 @@ public class WizardController : MonoBehaviour
             pState.jumping = false;
             coyoteTimeCounter = coyoteTime;
             airJumpCounter = 0;
+            jumpBufferCounter = 0;
         }
         else
         {

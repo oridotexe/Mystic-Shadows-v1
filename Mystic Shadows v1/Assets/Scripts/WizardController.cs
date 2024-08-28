@@ -28,9 +28,18 @@ public class WizardController : MonoBehaviour
     [SerializeField] private int maxAirJumps;
     [Space(5)]
 
+    [Header("Dash Settings: ")]
+    private bool ableDash = true;
+    private bool dashed;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashTime;
+    [SerializeField] private float dashCoolDown;
+    [Space(5)]
+
     private Rigidbody2D rb;
     Animator anim;
     WizardStateList pState;
+    private float gravity;
 
     public static WizardController instance;
 
@@ -58,6 +67,8 @@ public class WizardController : MonoBehaviour
         {
             Debug.LogError("Rigidbody2D component is missing");
         }
+
+        gravity = rb.gravityScale;
     }
 
     // Update is called once per frame
@@ -65,9 +76,11 @@ public class WizardController : MonoBehaviour
     {
         GetInputs();
         UpdateJumpVariable();
+        if(pState.dashing) return;
         Flip();
         Move();
         Jump();
+        StartDash();
         
     }
 
@@ -99,6 +112,38 @@ public class WizardController : MonoBehaviour
         anim.SetBool("Walking", rb.velocity.x != 0 && Grounded()); 
     }
 
+    void StartDash()
+    {
+        if(Input.GetButtonDown("Dash") && ableDash && !dashed)
+        {
+            StartCoroutine(Dash());
+            dashed = true;
+        }
+
+        if (Grounded())
+        {
+            dashed = false;
+        }
+
+    }
+
+
+    // Coretune that pauses the execution of the code at certain points to help the dash animation
+    IEnumerator Dash()
+    {
+        ableDash = false;
+        pState.dashing = true;
+        anim.SetTrigger("Dashing");
+        rb.gravityScale = 0;
+        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = gravity;
+        pState.dashing = false;
+        yield return new WaitForSeconds(dashCoolDown);
+        ableDash = true;
+    }
+
+
     // Detects if the wizard is on the ground
     public bool Grounded()
     {
@@ -125,14 +170,14 @@ public class WizardController : MonoBehaviour
         {
             if (jumpBufferCounter > 0 && coyoteTimeCounter > 0)
             {
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 pState.jumping = true;
             }
             else if(!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
             {
                 pState.jumping = true;
                 airJumpCounter++;
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
         }
 

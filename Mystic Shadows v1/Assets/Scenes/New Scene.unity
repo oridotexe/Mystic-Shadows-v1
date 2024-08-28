@@ -705,6 +705,9 @@ MonoBehaviour:
   jumpBufferFrames: 8
   coyoteTime: 0.1
   maxAirJumps: 1
+  dashSpeed: 70
+  dashTime: 0.2
+  dashCoolDown: 0.35
 --- !u!95 &1765648679
 Animator:
   serializedVersion: 5
@@ -739,6 +742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumping: 0
+  dashing: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

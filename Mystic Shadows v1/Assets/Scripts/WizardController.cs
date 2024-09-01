@@ -40,6 +40,9 @@ public class WizardController : MonoBehaviour
     Animator anim;
     WizardStateList pState;
     private float gravity;
+    private bool attack = false;
+    private float timeBetweenAttack;
+    private float timeSinceAttack;
 
     public static WizardController instance;
 
@@ -82,6 +85,7 @@ public class WizardController : MonoBehaviour
         Move();
         Jump();
         StartDash();
+        Attack();   
 
     }
 
@@ -209,6 +213,16 @@ public class WizardController : MonoBehaviour
         else
         {
             jumpBufferCounter = jumpBufferCounter - Time.deltaTime * 10;
+        }
+    }
+
+    void Attack()
+    {
+        timeSinceAttack += Time.deltaTime;
+        if(Input.GetButtonDown("Attack") && timeSinceAttack >= timeBetweenAttack)
+        {
+            timeSinceAttack = 0;
+            anim.SetTrigger("Attacking");
         }
     }
 

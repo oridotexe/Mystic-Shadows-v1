@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|c:\\mystic shadows\\mystic-shadows-v1\\mystic shadows v1\\assets\\scripts\\wizardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wizardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\assets\\slimeenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\slimeenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +28,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\WizardController.cs",
               "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\WizardController.cs",
               "RelativeToolTip": "Assets\\Scripts\\WizardController.cs",
-              "ViewState": "AQIAALAAAAAAAAAAAAAuwMMAAAAfAAAA",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwC8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T20:48:01.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SlimeEnemy.cs",
+              "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\SlimeEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\SlimeEnemy.cs",
+              "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\SlimeEnemy.cs",
+              "RelativeToolTip": "Assets\\SlimeEnemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T02:57:27.975Z",
               "EditorCaption": ""
             }
           ]

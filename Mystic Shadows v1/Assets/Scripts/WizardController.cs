@@ -8,7 +8,17 @@ public class WizardController : MonoBehaviour
 {
     [Header("Horizontal Movement Settings: ")]
     [SerializeField] private float walkSpeed = 20f;
-    private float xAxis;
+    [Space(5)]
+
+    [Header("Vertical Movement Settings: ")]
+    [SerializeField] private float jumpForce = 45f;
+    [SerializeField] private int jumpBufferFrames;
+    private float jumpBufferCounter = 0;
+    private float coyoteTimeCounter = 0;
+    [SerializeField] private float coyoteTime;
+    private int airJumpCounter = 0;
+    [SerializeField] private int maxAirJumps;
+    private float gravity;
     [Space(5)]
 
     [Header("Ground Check Settings: ")]
@@ -18,34 +28,40 @@ public class WizardController : MonoBehaviour
     [SerializeField] private LayerMask wheresGround;
     [Space(5)]
 
-    [Header("Jump Settings: ")]
-    [SerializeField] private float jumpForce = 45f;
-    [SerializeField] private int jumpBufferFrames;
-    private float jumpBufferCounter = 0;
-    private float coyoteTimeCounter = 0;
-    [SerializeField] private float coyoteTime;
-    private int airJumpCounter = 0;
-    [SerializeField] private int maxAirJumps;
-    [Space(5)]
 
     [Header("Dash Settings: ")]
-    private bool ableDash = true;
-    private bool dashed;
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCoolDown;
+    private bool ableDash = true, dashed;
     [Space(5)]
 
-    private Rigidbody2D rb;
-    Animator anim;
-    WizardStateList pState;
-    private float gravity;
+    [Header("Attack settings: ")]
+    [SerializeField] Transform SideAttackTransform;
+    [SerializeField] Transform UpAttackTransform;
+    [SerializeField] Transform DownAttackTransform;
+    [SerializeField] Vector2 SideAttackArea;
+    [SerializeField] Vector2 UpAttackArea;
+    [SerializeField] Vector2 DownAttackArea;
+    [SerializeField] LayerMask attackableLayer;
+    [SerializeField] private GameObject slashEffect;
+    [SerializeField] float damage;
     private bool attack = false;
     private float timeBetweenAttack;
     private float timeSinceAttack;
+    [Space(5)]
+
+    private Rigidbody2D rb;
+    private Animator anim;
+    private WizardStateList pState;
+
+    // input variables
+    private float xAxis, yAxis;
+
 
     public static WizardController instance;
 
+    // Creates a singleton of the WizardController
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -74,6 +90,14 @@ public class WizardController : MonoBehaviour
         gravity = rb.gravityScale;
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(SideAttackTransform.position, SideAttackArea);
+        Gizmos.DrawWireCube(UpAttackTransform.position, UpAttackArea);  
+        Gizmos.DrawWireCube(DownAttackTransform.position, DownAttackArea);  
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -93,7 +117,7 @@ public class WizardController : MonoBehaviour
     private void GetInputs()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
-        // Debug.Log("xAxis: " + xAxis);
+        yAxis = Input.GetAxisRaw("Vertical");
     }
 
     void Flip()
@@ -223,7 +247,45 @@ public class WizardController : MonoBehaviour
         {
             timeSinceAttack = 0;
             anim.SetTrigger("Attacking");
+
+            if(yAxis == 0 || xAxis < 0 && Grounded())
+            {
+                Hit(SideAttackTransform, SideAttackArea);
+                Instantiate(slashEffect, SideAttackTransform);
+            }
+            else if(yAxis > 0)
+            {
+                Hit(UpAttackTransform, UpAttackArea);
+                SlashEffectAngle(slashEffect, 80, UpAttackTransform);
+            }
+            else if (yAxis < 0 && !Grounded())
+            {
+                Hit(DownAttackTransform, DownAttackArea);
+                SlashEffectAngle(slashEffect, -90, DownAttackTransform);
+            }
         }
     }
 
+    private void Hit(Transform _attackTranform, Vector2 _attackArea)
+    {
+        Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTranform.position, _attackArea, 0, attackableLayer);
+        List<SlimeEnemy> hitEnemies = new List<SlimeEnemy>();
+
+        for (int i = 0; i < objectsToHit.Length; i++)
+        {
+           SlimeEnemy e = objectsToHit[i].GetComponent<SlimeEnemy>();
+            if(e && !hitEnemies.Contains(e))
+            {
+                e.EnemyHit(damage);
+                hitEnemies.Add(e);  
+            }
+        }
+    }
+
+    private void SlashEffectAngle(GameObject _slashEffect, int _effectAngle, Transform _attackTransform)
+    {
+        _slashEffect = Instantiate(_slashEffect, _attackTransform);
+        _slashEffect.transform.eulerAngles = new Vector3(0,0, _effectAngle);
+        _slashEffect.transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y);    
+    }
 }

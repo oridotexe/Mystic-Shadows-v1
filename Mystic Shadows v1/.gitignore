@@ -24,3 +24,6 @@ sysinfo.txt
 *.xcuserdatad
 *.ipa
 *.app
+.vs/
+*.vsidx
+*.VC.db

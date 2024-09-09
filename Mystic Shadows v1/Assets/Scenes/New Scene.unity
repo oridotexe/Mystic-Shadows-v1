@@ -122,23 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &78573603 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2095571838440320494, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
-  m_PrefabInstance: {fileID: 8648039999492478951}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &78573607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78573603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f65f15dc4e20ad45b3bca366f800d41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &749261281
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,8 +147,8 @@ Transform:
   m_GameObject: {fileID: 749261281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.75, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1765648677}
@@ -824,9 +807,9 @@ MonoBehaviour:
   SideAttackTransform: {fileID: 749261282}
   UpAttackTransform: {fileID: 967109166}
   DownAttackTransform: {fileID: 1708983805}
-  SideAttackArea: {x: 4, y: 3.5}
-  UpAttackArea: {x: 3.5, y: 3.9}
-  DownAttackArea: {x: 3.5, y: 3.9}
+  SideAttackArea: {x: 5, y: 4}
+  UpAttackArea: {x: 5, y: 4}
+  DownAttackArea: {x: 5, y: 3.9}
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1056,6 +1039,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3405946082716979850, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3405946082716979850, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1098,10 +1085,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2095571838440320494, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 78573607}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

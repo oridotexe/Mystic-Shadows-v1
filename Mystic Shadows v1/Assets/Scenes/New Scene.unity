@@ -815,6 +815,10 @@ MonoBehaviour:
     m_Bits: 64
   slashEffect: {fileID: 2095571838440320494, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
   damage: 2
+  recoilXSteps: 5
+  recoilYSteps: 5
+  recoilXSpeed: 100
+  recoilYSpeed: 100
 --- !u!95 &1765648679
 Animator:
   serializedVersion: 5
@@ -850,6 +854,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumping: 0
   dashing: 0
+  recoilingX: 0
+  recoilingY: 0
+  lookingRight: 0
 --- !u!1 &1888423783
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +890,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  recoilLength: 0.5
+  recoilFactor: 5
+  isRecoiling: 0
 --- !u!50 &1888423785
 Rigidbody2D:
   serializedVersion: 4
@@ -1044,11 +1054,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3405946082716979850, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 3405946082716979850, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 3405946082716979850, guid: e4fec295dcf583c47a395a0b16f68f81, type: 3}
       propertyPath: m_LocalPosition.z

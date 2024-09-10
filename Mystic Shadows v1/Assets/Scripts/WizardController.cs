@@ -102,7 +102,8 @@ public class WizardController : MonoBehaviour
         {
             instance = this;
         }
-        Health = maxHealth;
+        DontDestroyOnLoad(gameObject);  
+
     }
 
     // Start is called before the first frame update
@@ -120,6 +121,7 @@ public class WizardController : MonoBehaviour
         gravity = rb.gravityScale;
         Mana = mana;
         manaStorage.fillAmount = Mana;
+        Health = maxHealth;
     }
 
     private void OnDrawGizmos()
@@ -208,7 +210,8 @@ public class WizardController : MonoBehaviour
         pState.dashing = true;
         anim.SetTrigger("Dashing");
         rb.gravityScale = 0;
-        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
+        int _dir = pState.lookingRight ? 1 : -1;
+        rb.velocity = new Vector2(_dir * dashSpeed, 0);
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = gravity;
         pState.dashing = false;
@@ -223,7 +226,6 @@ public class WizardController : MonoBehaviour
         bool isGrounded = Physics2D.Raycast(groundCheckPoint.position, Vector2.down, groundCheckY, wheresGround)
             || Physics2D.Raycast(groundCheckPoint.position + new Vector3(groundCheckX, 0, 0), Vector2.down, groundCheckY, wheresGround)
             || Physics2D.Raycast(groundCheckPoint.position + new Vector3(-groundCheckX, 0, 0), Vector2.down, groundCheckY, wheresGround);
-
         //Debug.Log("Is Grounded: " + isGrounded);
         return isGrounded;
     }
@@ -232,29 +234,27 @@ public class WizardController : MonoBehaviour
     // Wizard's jump movement 
     void Jump()
     {
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0)
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 3)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             pState.jumping = false;
 
         }
 
-        if (!pState.jumping)
+        if (!pState.jumping && jumpBufferCounter > 0 && coyoteTimeCounter > 0)
         {
-            if (jumpBufferCounter > 0 && coyoteTimeCounter > 0)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                pState.jumping = true;
-                jumpBufferCounter = 0;
-            }
-            else if (!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
-            {
-                pState.jumping = true;
-                airJumpCounter++;
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            }
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            pState.jumping = true;
+            jumpBufferCounter = 0;
         }
-
+        
+        if (!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
+        {
+            pState.jumping = true;
+            airJumpCounter++;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+          
+        }
         anim.SetBool("Jumping", !Grounded());
     }
 
@@ -272,7 +272,6 @@ public class WizardController : MonoBehaviour
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
-
 
         if (Input.GetButtonDown("Jump"))
         {

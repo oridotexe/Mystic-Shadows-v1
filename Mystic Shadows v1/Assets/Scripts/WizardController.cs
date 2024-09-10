@@ -61,14 +61,14 @@ public class WizardController : MonoBehaviour
     private int stepsXRecoiled, stepsYRecoiled;
 
     [Header("Health settings: ")]
-    [SerializeField] public int health;
-    [SerializeField] public int maxHealth;
+    public int health;
+    public int maxHealth;
     [SerializeField] float hitFlashSpeed;
     public delegate void OnHealthChangedDelegate();
     [HideInInspector] public OnHealthChangedDelegate OnHealthChangedCallback;
     [Space(5)]
 
-    [SerializeField] GameObject blood;
+    [SerializeField] GameObject bloodSpurt;
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sr;
@@ -396,9 +396,9 @@ public class WizardController : MonoBehaviour
     IEnumerator StopTakingDamage()
     {
         pState.invincible = true;
-        GameObject _bloodParticles = Instantiate(blood, transform.position, Quaternion.identity);
-        Destroy(_bloodParticles, 1.5f);
         anim.SetTrigger("TakeDamage");
+        GameObject _bloodParticles = Instantiate(bloodSpurt, transform.position, Quaternion.identity);
+        Destroy(_bloodParticles, 1.5f);
         yield return new WaitForSeconds(1f);
         pState.invincible = false;  
     }

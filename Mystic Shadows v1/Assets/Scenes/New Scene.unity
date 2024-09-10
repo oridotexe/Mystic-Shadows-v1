@@ -1344,7 +1344,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 258407585653834290, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
       propertyPath: m_Name
-      value: Blood
+      value: Blood Spurt
       objectReference: {fileID: 0}
     - target: {fileID: 258407585653834290, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
       propertyPath: m_IsActive
@@ -1393,6 +1393,30 @@ PrefabInstance:
     - target: {fileID: 3976219574389118613, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+      propertyPath: lengthInSec
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

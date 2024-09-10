@@ -46,9 +46,11 @@ public class WizardController : MonoBehaviour
     [SerializeField] LayerMask attackableLayer;
     [SerializeField] private GameObject slashEffect;
     [SerializeField] float damage;
-    private bool attack = false;
-    private float timeBetweenAttack;
+    [SerializeField] private bool attack = false;
+    [SerializeField] private float timeBetweenAttack;
     private float timeSinceAttack;
+    bool restoreTime;
+    float restoreTimeSpeed;
     [Space(5)]
 
     [Header("Recoil settings: ")]
@@ -56,11 +58,21 @@ public class WizardController : MonoBehaviour
     [SerializeField] int recoilYSteps = 5;
     [SerializeField] float recoilXSpeed = 100;
     [SerializeField] float recoilYSpeed = 100;
-    private int stepsXRecoiled, stepsYRecoiled; 
+    private int stepsXRecoiled, stepsYRecoiled;
 
+    [Header("Health settings: ")]
+    [SerializeField] public int health;
+    [SerializeField] public int maxHealth;
+    [SerializeField] float hitFlashSpeed;
+    public delegate void OnHealthChangedDelegate();
+    [HideInInspector] public OnHealthChangedDelegate OnHealthChangedCallback;
+    [Space(5)]
+
+    [SerializeField] GameObject blood;
     private Rigidbody2D rb;
     private Animator anim;
-    private WizardStateList pState;
+    private SpriteRenderer sr;
+    [HideInInspector] public WizardStateList pState;
 
     // input variables
     private float xAxis, yAxis;
@@ -79,15 +91,15 @@ public class WizardController : MonoBehaviour
         {
             instance = this;
         }
+        Health = maxHealth;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         pState = GetComponent<WizardStateList>();
-
         anim = GetComponent<Animator>();
-
+        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         if (rb == null)
         {
@@ -110,17 +122,22 @@ public class WizardController : MonoBehaviour
     {
         GetInputs();
         UpdateJumpVariable();
-
         if (pState.dashing) return;
         Flip();
         Move();
         Jump();
         StartDash();
         Attack(); 
-        Recoil();
-
+        RestoreTimeScale();
+        FlashWhileInvincible();
     }
 
+    // recoils
+    private void FixedUpdate()
+    {
+        if (pState.dashing) return;
+        Recoil();
+    }
     // Get the inputs of the game
     private void GetInputs()
     {
@@ -250,20 +267,21 @@ public class WizardController : MonoBehaviour
         }
     }
 
+    // Attack 
     void Attack()
     {
         timeSinceAttack += Time.deltaTime;
-        if(Input.GetButtonDown("Attack") && timeSinceAttack >= timeBetweenAttack)
+        if (Input.GetButtonDown("Attack") && timeSinceAttack >= timeBetweenAttack)
         {
             timeSinceAttack = 0;
             anim.SetTrigger("Attacking");
 
-            if(yAxis == 0 || xAxis < 0 && Grounded())
+            if (yAxis == 0 || (xAxis < 0 && Grounded()))
             {
                 Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilYSpeed);
-                Instantiate(slashEffect, SideAttackTransform);
+                Instantiate(slashEffect, SideAttackTransform.position, Quaternion.identity);
             }
-            else if(yAxis > 0)
+            else if (yAxis > 0)
             {
                 Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
                 SlashEffectAngle(slashEffect, 80, UpAttackTransform);
@@ -373,4 +391,84 @@ public class WizardController : MonoBehaviour
         stepsYRecoiled = 0;
         pState.recoilingY = false;
     }
+
+    // corroutine so it can stop taking damage
+    IEnumerator StopTakingDamage()
+    {
+        pState.invincible = true;
+        GameObject _bloodParticles = Instantiate(blood, transform.position, Quaternion.identity);
+        Destroy(_bloodParticles, 1.5f);
+        anim.SetTrigger("TakeDamage");
+        yield return new WaitForSeconds(1f);
+        pState.invincible = false;  
+    }
+    public void TakeDamage(float _damage)
+    {
+        Health -= Mathf.RoundToInt(_damage);
+        StartCoroutine(StopTakingDamage()); 
+    }
+
+    public int Health
+    {
+        get { return health;}
+        set
+        {
+            if (health != value)
+            {
+                health = Mathf.Clamp(value, 0, maxHealth);
+
+                if(OnHealthChangedCallback != null)
+                {
+                    OnHealthChangedCallback.Invoke();
+                }
+            }
+        }
+    }
+
+    // Stops the time once the player is hitten
+    public void HitStopTime(float _newTimeScale, int _restoreSpeed, float _delay)
+    {
+        restoreTimeSpeed = _restoreSpeed;
+        if (_delay > 0)
+        {
+            StopCoroutine(StartTimeAgain(_delay));
+            StartCoroutine(StartTimeAgain(_delay));
+        }
+        else
+        {
+            restoreTime = true;
+        }
+
+        Time.timeScale = _newTimeScale;
+    }
+
+    // Coroutine that helps start the time again
+    IEnumerator StartTimeAgain(float _delay)
+    {
+        yield return new WaitForSecondsRealtime(_delay);
+        restoreTime = true;
+    }
+
+    // Starts the time again
+    void RestoreTimeScale()
+    {
+        if (restoreTime)
+        {
+            if (Time.timeScale < 1)
+            {
+                Time.timeScale += Time.unscaledDeltaTime * restoreTimeSpeed;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                restoreTime = false;
+            }
+        }
+    }
+
+    void FlashWhileInvincible()
+    {
+        sr.material.color = pState.invincible ? Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time * hitFlashSpeed, 1.0f)) : Color.white;
+    }
+
 }

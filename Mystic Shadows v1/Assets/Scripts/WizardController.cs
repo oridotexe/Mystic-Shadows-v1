@@ -226,7 +226,7 @@ public class WizardController : MonoBehaviour
         bool isGrounded = Physics2D.Raycast(groundCheckPoint.position, Vector2.down, groundCheckY, wheresGround)
             || Physics2D.Raycast(groundCheckPoint.position + new Vector3(groundCheckX, 0, 0), Vector2.down, groundCheckY, wheresGround)
             || Physics2D.Raycast(groundCheckPoint.position + new Vector3(-groundCheckX, 0, 0), Vector2.down, groundCheckY, wheresGround);
-        //Debug.Log("Is Grounded: " + isGrounded);
+        Debug.Log("Is Grounded: " + isGrounded);
         return isGrounded;
     }
 

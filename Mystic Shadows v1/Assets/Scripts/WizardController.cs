@@ -398,7 +398,7 @@ public class WizardController : MonoBehaviour
         pState.invincible = true;
         anim.SetTrigger("TakeDamage");
         GameObject _bloodParticles = Instantiate(bloodSpurt, transform.position, Quaternion.identity);
-        Destroy(_bloodParticles, 1.5f);
+        Destroy(_bloodParticles, 4f);
         yield return new WaitForSeconds(1f);
         pState.invincible = false;  
     }

@@ -1068,8 +1068,8 @@ MonoBehaviour:
   recoilYSpeed: 100
   health: 0
   maxHealth: 5
-  hitFlashSpeed: 0
-  blood: {fileID: 0}
+  hitFlashSpeed: 10
+  bloodSpurt: {fileID: 1941059360}
   pState: {fileID: 0}
 --- !u!95 &1765648679
 Animator:
@@ -1334,6 +1334,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1941059360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 258407585653834290, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+  m_PrefabInstance: {fileID: 4146224136674768022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4146224136674768022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1408,7 +1413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 4
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
       propertyPath: InitialModule.startSize.minScalar
@@ -1417,6 +1426,10 @@ PrefabInstance:
     - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782325429436164190, guid: cf95b8eed74152d4b953cb41fb8fe92f, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

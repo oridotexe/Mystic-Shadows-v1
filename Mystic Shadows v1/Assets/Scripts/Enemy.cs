@@ -57,9 +57,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void OnTriggerStay2D(Collider2D _other)
+    public void OnCollisionStay2D(Collision2D _other)
     {
-        if (_other.CompareTag("Wizard") && !WizardController.instance.pState.invincible)
+        if (_other.gameObject.CompareTag("Wizard") && !WizardController.instance.pState.invincible)
         {
             Attack();
             WizardController.instance.HitStopTime(0, 5, 0.5f);

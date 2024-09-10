@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using Unity.UI;
+using Unity.UIElements;
 
 public class WizardController : MonoBehaviour
 {
@@ -66,6 +68,15 @@ public class WizardController : MonoBehaviour
     [SerializeField] float hitFlashSpeed;
     public delegate void OnHealthChangedDelegate();
     [HideInInspector] public OnHealthChangedDelegate OnHealthChangedCallback;
+    [SerializeField] float timeToHeal;
+    float healTimer;
+    [Space(5)]
+
+    [Header("Mana Settings")]
+    [SerializeField] UnityEngine.UI.Image manaStorage;
+    [SerializeField] float mana;
+    [SerializeField] float manaDrainSpeed;
+    [SerializeField] float manaGain;
     [Space(5)]
 
     [SerializeField] GameObject bloodSpurt;
@@ -107,6 +118,8 @@ public class WizardController : MonoBehaviour
         }
 
         gravity = rb.gravityScale;
+        Mana = mana;
+        manaStorage.fillAmount = Mana;
     }
 
     private void OnDrawGizmos()
@@ -122,20 +135,23 @@ public class WizardController : MonoBehaviour
     {
         GetInputs();
         UpdateJumpVariable();
+
         if (pState.dashing) return;
-        Flip();
-        Move();
-        Jump();
-        StartDash();
-        Attack(); 
         RestoreTimeScale();
         FlashWhileInvincible();
+        Move();
+        Heal();
+        if (pState.healing) return;
+        Flip();
+        Jump();
+        StartDash();
+        Attack();
     }
 
     // recoils
     private void FixedUpdate()
     {
-        if (pState.dashing) return;
+        if (pState.dashing || pState.healing) return;
         Recoil();
     }
     // Get the inputs of the game
@@ -164,6 +180,7 @@ public class WizardController : MonoBehaviour
     // Let the wizard's movement 
     private void Move()
     {
+        if (pState.healing) rb.velocity = new Vector2(0, 0); // so it doesnt move
         rb.velocity = new Vector2(walkSpeed * xAxis, rb.velocity.y);
         anim.SetBool("Walking", rb.velocity.x != 0 && Grounded());
     }
@@ -310,11 +327,30 @@ public class WizardController : MonoBehaviour
             if(e && !hitEnemies.Contains(e))
             {
                 e.EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrenght);
-                hitEnemies.Add(e);  
+                hitEnemies.Add(e);
+                if (objectsToHit[i].CompareTag("Enemy")){
+                    Mana += manaGain;
+                }
             }
         }
     }
 
+    // Stops the time once the player is hitten
+    public void HitStopTime(float _newTimeScale, int _restoreSpeed, float _delay)
+    {
+        restoreTimeSpeed = _restoreSpeed;
+        if (_delay > 0)
+        {
+            StopCoroutine(StartTimeAgain(_delay));
+            StartCoroutine(StartTimeAgain(_delay));
+        }
+        else
+        {
+            restoreTime = true;
+        }
+
+        Time.timeScale = _newTimeScale;
+    }
     private void SlashEffectAngle(GameObject _slashEffect, int _effectAngle, Transform _attackTransform)
     {
         _slashEffect = Instantiate(_slashEffect, _attackTransform);
@@ -425,23 +461,6 @@ public class WizardController : MonoBehaviour
         }
     }
 
-    // Stops the time once the player is hitten
-    public void HitStopTime(float _newTimeScale, int _restoreSpeed, float _delay)
-    {
-        restoreTimeSpeed = _restoreSpeed;
-        if (_delay > 0)
-        {
-            StopCoroutine(StartTimeAgain(_delay));
-            StartCoroutine(StartTimeAgain(_delay));
-        }
-        else
-        {
-            restoreTime = true;
-        }
-
-        Time.timeScale = _newTimeScale;
-    }
-
     // Coroutine that helps start the time again
     IEnumerator StartTimeAgain(float _delay)
     {
@@ -469,6 +488,47 @@ public class WizardController : MonoBehaviour
     void FlashWhileInvincible()
     {
         sr.material.color = pState.invincible ? Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time * hitFlashSpeed, 1.0f)) : Color.white;
+    }
+
+    // Heasls the wizard
+    void Heal()
+    {
+        if (Input.GetButton("Healing") && Health < maxHealth && Mana > 0 && Grounded() && !pState.dashing && !pState.jumping)
+        {
+            pState.healing = true;
+            anim.SetBool("Healing", true);
+            //healing
+            healTimer += Time.deltaTime;
+            if (healTimer >= timeToHeal)
+            {
+                Health++;
+                healTimer = 0;
+            }
+            Mana -= Time.deltaTime * manaDrainSpeed;
+        }
+        else
+        {
+            pState.healing = false;
+            anim.SetBool("Healing", false);
+            healTimer = 0;
+        }
+    }
+
+
+    // it doesnt let us to heal always
+    float Mana
+    {
+        get { return mana; }
+        set
+        {
+            //if mana stats change
+            if (mana != value)
+            {
+                mana = Mathf.Clamp(value, 0, 1);
+                manaStorage.fillAmount = Mana;
+
+            }
+        }
     }
 
 }

@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|c:\\mystic shadows\\mystic-shadows-v1\\mystic shadows v1\\assets\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|c:\\mystic shadows\\mystic-shadows-v1\\mystic shadows v1\\assets\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\assets\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\assets\\scripts\\wizardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wizardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\assets\\scripts\\wizardstatelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wizardstatelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|c:\\mystic shadows\\mystic-shadows-v1\\mystic shadows v1\\assets\\scenefader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\scenefader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|c:\\mystic shadows\\mystic-shadows-v1\\mystic shadows v1\\assets\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\assets\\scripts\\wizardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wizardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\HeartController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\HeartController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\assets\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "WizardController.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\WizardController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WizardController.cs",
@@ -59,45 +59,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\UIManager.cs",
               "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\UIManager.cs",
               "RelativeToolTip": "Assets\\UIManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T12:02:25.639Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\GameManager.cs",
-              "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\GameManager.cs",
-              "RelativeToolTip": "Assets\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "SceneFader.cs",
+              "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\SceneFader.cs",
+              "RelativeDocumentMoniker": "Assets\\SceneFader.cs",
+              "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\SceneFader.cs",
+              "RelativeToolTip": "Assets\\SceneFader.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwCQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T03:57:11.841Z"
+              "WhenOpened": "2024-09-11T13:20:50.889Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SceneTransition.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\SceneTransition.cs",
               "RelativeDocumentMoniker": "Assets\\SceneTransition.cs",
               "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\SceneTransition.cs",
               "RelativeToolTip": "Assets\\SceneTransition.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBAAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T03:48:14.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HeartController.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\HeartController.cs",
               "RelativeDocumentMoniker": "Assets\\HeartController.cs",
@@ -109,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
@@ -121,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Guardian.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\Guardian.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Guardian.cs",
@@ -133,15 +135,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "WizardStateList.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\WizardStateList.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WizardStateList.cs",
               "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\WizardStateList.cs",
               "RelativeToolTip": "Assets\\Scripts\\WizardStateList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T02:58:54.507Z"
+              "WhenOpened": "2024-09-09T02:58:54.507Z",
+              "EditorCaption": ""
             }
           ]
         }

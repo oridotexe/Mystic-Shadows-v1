@@ -124,17 +124,18 @@ public class WizardController : MonoBehaviour
         Health = maxHealth;
     }
 
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(SideAttackTransform.position, SideAttackArea);
         Gizmos.DrawWireCube(UpAttackTransform.position, UpAttackArea);  
         Gizmos.DrawWireCube(DownAttackTransform.position, DownAttackArea);  
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
     {
+        if (pState.cutScene) return;
         GetInputs();
         UpdateJumpVariable();
 
@@ -153,7 +154,7 @@ public class WizardController : MonoBehaviour
     // recoils
     private void FixedUpdate()
     {
-        if (pState.dashing || pState.healing) return;
+        if (pState.dashing || pState.healing || pState.cutScene) return;
         Recoil();
     }
     // Get the inputs of the game
@@ -226,7 +227,8 @@ public class WizardController : MonoBehaviour
         bool isGrounded = Physics2D.Raycast(groundCheckPoint.position, Vector2.down, groundCheckY, wheresGround)
             || Physics2D.Raycast(groundCheckPoint.position + new Vector3(groundCheckX, 0, 0), Vector2.down, groundCheckY, wheresGround)
             || Physics2D.Raycast(groundCheckPoint.position + new Vector3(-groundCheckX, 0, 0), Vector2.down, groundCheckY, wheresGround);
-        Debug.Log("Is Grounded: " + isGrounded);
+        //
+        //Debug.Log("Is Grounded: " + isGrounded);
         return isGrounded;
     }
 
@@ -486,6 +488,7 @@ public class WizardController : MonoBehaviour
 
     void FlashWhileInvincible()
     {
+        if (pState.cutScene) return;
         sr.material.color = pState.invincible ? Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time * hitFlashSpeed, 1.0f)) : Color.white;
     }
 
@@ -512,6 +515,27 @@ public class WizardController : MonoBehaviour
             healTimer = 0;
         }
     }
+    public IEnumerator WalkIntoNewScene(Vector2 _exitDir, float _delay)
+    {
+        pState.invincible = true;
+        //If exit direction is upwards
+        if (_exitDir.y > 0)
+        {
+            rb.velocity = jumpForce * _exitDir;
+        }
+
+        //If exit direction requires horizontal movement
+        if (_exitDir.x != 0)
+        {
+            xAxis = _exitDir.x > 0 ? 1 : -1;
+            Move();
+        }
+        Flip();
+        yield return new WaitForSeconds(_delay);
+        pState.invincible = false;
+        pState.cutScene = false;
+    }
+
 
 
     // it doesnt let us to heal always

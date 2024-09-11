@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|c:\\mystic shadows\\mystic-shadows-v1\\mystic shadows v1\\assets\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|c:\\mystic shadows\\mystic-shadows-v1\\mystic shadows v1\\assets\\scripts\\wizardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48A6170A-9233-9B08-DA07-531B26DE5CDC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wizardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WizardController.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\WizardController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WizardController.cs",
               "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\WizardController.cs",
               "RelativeToolTip": "Assets\\Scripts\\WizardController.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAAAOQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAIBJwOQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T20:48:01.207Z",
               "IsPinned": true,
@@ -48,7 +52,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "SceneTransition.cs",
+              "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\SceneTransition.cs",
+              "RelativeDocumentMoniker": "Assets\\SceneTransition.cs",
+              "ToolTip": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\SceneTransition.cs",
+              "RelativeToolTip": "Assets\\SceneTransition.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T03:48:14.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HeartController.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\HeartController.cs",
               "RelativeDocumentMoniker": "Assets\\HeartController.cs",
@@ -60,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
@@ -72,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Guardian.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\Guardian.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Guardian.cs",
@@ -84,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "WizardStateList.cs",
               "DocumentMoniker": "C:\\Mystic Shadows\\Mystic-Shadows-v1\\Mystic Shadows v1\\Assets\\Scripts\\WizardStateList.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WizardStateList.cs",

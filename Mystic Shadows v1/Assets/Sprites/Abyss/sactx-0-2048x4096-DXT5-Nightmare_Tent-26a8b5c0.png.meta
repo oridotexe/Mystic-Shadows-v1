@@ -1,0 +1,941 @@
+fileFormatVersion: 2
+guid: 7082f721d448eb546bc24d48741da671
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3226
+        width: 595
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b8611f082e2964e98338f979cfa130
+      internalID: -427099037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3360
+        width: 306
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3dab44d098bafc46a6b1bfe36009af2
+      internalID: -763873061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2556
+        width: 180
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040503be0347ce94193bdd34e0e094ec
+      internalID: 1836104739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1924
+        width: 160
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c82d66e963c2f44e85e708773801b4e
+      internalID: 1058599942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_4
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 2976
+        width: 600
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57509b0a5c3b8194092f509f09e1f26b
+      internalID: 1320970164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_5
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 2647
+        width: 535
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c50a876405d9848909cfe953b468d6
+      internalID: 786002413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_6
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 2793
+        width: 586
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdc2ba43be8f744d98468b16a3e219c
+      internalID: 798924076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1888
+        width: 302
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0071e38bd90157141a6b27860fa458d3
+      internalID: -1013741560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_8
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 2416
+        width: 603
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d358aa4f7185a584a819526d5e67e37e
+      internalID: -1794005143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_9
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 2166
+        width: 724
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26036349ebf18644a40ae9bb1d726d8
+      internalID: 1906811439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_10
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1924
+        width: 102
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd6a1d2b42b9b34d9dc03ecd2bedfc4
+      internalID: 884286877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_11
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 2241
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b46bdd9f29b444428944220563629c4
+      internalID: 354419579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_12
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1903
+        width: 745
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51af780ae832ec04786f4f9415c59d9a
+      internalID: -1300326187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_13
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 740
+        width: 664
+        height: 1204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae95bf4752c757945944ff0220adb172
+      internalID: -262970700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_14
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 1538
+        width: 201
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5803707f97f1e7640b672324cfd823cf
+      internalID: -51175500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_15
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1606
+        width: 167
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df596db2d178854bbae7836f95a65e8
+      internalID: 568142564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_16
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 0
+        width: 518
+        height: 1361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab14750369eff54ca5144540f1a44bf
+      internalID: -1230487218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_17
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1354
+        width: 343
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60b5df2267fcb245ba3f11faf365475
+      internalID: -2088351001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_18
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1237
+        width: 190
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc04a243d8f6524a84f9690a66cf33f
+      internalID: 1675334892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_19
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1186
+        width: 213
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69c19dae704225429706030d3f1671b
+      internalID: 863865819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_20
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1132
+        width: 254
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2241f46dc4edc8f49aad6ffed43b042f
+      internalID: 309967142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1119
+        width: 132
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a622b9331aca284d88a9a9164da37ce
+      internalID: -2012948866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_22
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 0
+        width: 498
+        height: 1187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89c2369afb40574ba4b918a7d18de49
+      internalID: -663014720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_23
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 1185
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8245b35afc291e4baf625c00fde9c15
+      internalID: 979663772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 734
+        height: 1131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92d4eef1bba45f458fa8963a39d5987
+      internalID: 282363017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_25
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 822
+        width: 14
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af9da14e8327064f885ba9addc98b45
+      internalID: 1987440600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_26
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 702
+        width: 146
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6184759fd8990c04eb9e9879353ad5ac
+      internalID: 1419340646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_27
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 814
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776365b7b35fe29428a31e6c9211a930
+      internalID: 1082378467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_28
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 650
+        width: 221
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7c87a155803f24fb758cd091f6ed37
+      internalID: -1818947943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_29
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 567
+        width: 37
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63988f9b3d728974da5c7771fd8692b0
+      internalID: 551295883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_30
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 571
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d9bb08d91cea148933c6f88950395d
+      internalID: -1565698807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_31
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 432
+        width: 42
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adcbb2d5d8105a4e8d5f81b60fb497b
+      internalID: -77314527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_32
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 195
+        width: 185
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a986f9160934e6a4c80b439dc7c3f347
+      internalID: 977156770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_33
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 217
+        width: 100
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb32b15188eb14040b7e574ff737ef5c
+      internalID: 1140316881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_34
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 374
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90f358874a23964e87b7be19468153e
+      internalID: 1225513700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_35
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 385
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4348a382a5a66214389f2811477bf05a
+      internalID: -1313604139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_36
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 381
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7f77b25af1b9442a7f2ddc779449ef
+      internalID: 677070220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_0: -427099037
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_1: -763873061
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_10: 884286877
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_11: 354419579
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_12: -1300326187
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_13: -262970700
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_14: -51175500
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_15: 568142564
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_16: -1230487218
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_17: -2088351001
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_18: 1675334892
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_19: 863865819
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_2: 1836104739
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_20: 309967142
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_21: -2012948866
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_22: -663014720
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_23: 979663772
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_24: 282363017
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_25: 1987440600
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_26: 1419340646
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_27: 1082378467
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_28: -1818947943
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_29: 551295883
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_3: 1058599942
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_30: -1565698807
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_31: -77314527
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_32: 977156770
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_33: 1140316881
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_34: 1225513700
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_35: -1313604139
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_36: 677070220
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_4: 1320970164
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_5: 786002413
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_6: 798924076
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_7: -1013741560
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_8: -1794005143
+      sactx-0-2048x4096-DXT5-Nightmare_Tent-26a8b5c0_9: 1906811439
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

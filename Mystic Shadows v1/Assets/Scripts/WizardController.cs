@@ -119,7 +119,7 @@ public class WizardController : MonoBehaviour
         }
 
         gravity = rb.gravityScale;
-
+        Mana = mana;
         manaStorage.fillAmount = Mana;
         Health = maxHealth;
     }
@@ -138,9 +138,9 @@ public class WizardController : MonoBehaviour
         if (pState.cutScene) return;
         GetInputs();
         UpdateJumpVariable();
-
-        if (pState.dashing) return;
         RestoreTimeScale();
+
+        if (pState.dashing) return;      
         FlashWhileInvincible();
         Move();
         Heal();
@@ -518,7 +518,7 @@ public class WizardController : MonoBehaviour
     public IEnumerator WalkIntoNewScene(Vector2 _exitDir, float _delay)
     {
         pState.invincible = true;
-       
+        //If exit direction is upwards
         if (_exitDir.y > 0)
         {
             rb.velocity = jumpForce * _exitDir;

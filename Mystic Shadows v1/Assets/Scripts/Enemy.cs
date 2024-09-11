@@ -16,17 +16,31 @@ public class Enemy : MonoBehaviour
 
     protected float recoilTimer;
     protected Rigidbody2D rb;
+    protected SpriteRenderer sr;
 
+    protected enum EnemyStates
+    {
+        Mushroom_Idle,
+        Mushroom_Flip,
+        Fly_Idle,
+        Fly_Chase,
+        Fly_Stunned,
+        Fly_Death
+    }
+
+    protected EnemyStates currentEnemyState;
     // Start is called before the first frame update
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         wizard = WizardController.instance;
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
+        UpdateEnemyStates();
         if(health <= 0)
         {
             Destroy(gameObject);
@@ -69,5 +83,20 @@ public class Enemy : MonoBehaviour
     public virtual void Attack()
     {
         WizardController.instance.TakeDamage(damage);
+    }
+
+    protected virtual void UpdateEnemyStates()
+    {
+
+    }
+
+    protected void ChangeState(EnemyStates _newState)
+    {
+        if (currentEnemyState != _newState)
+        {
+            Debug.Log($"Changing state from {currentEnemyState} to {_newState}");
+            currentEnemyState = _newState;
+        }
+        currentEnemyState = _newState;  
     }
 }

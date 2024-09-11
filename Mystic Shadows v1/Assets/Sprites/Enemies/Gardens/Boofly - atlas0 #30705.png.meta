@@ -1,0 +1,1051 @@
+fileFormatVersion: 2
+guid: 32189d7326f39f84c9be073777e11ff5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_0
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 960
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b89d210489b833448ac4f6ef11c62c1
+      internalID: 468607150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_1
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 658
+        width: 297
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100d4797b81a17045b93cfc4e0ccacca
+      internalID: -439154383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_2
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 665
+        width: 290
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841ba8950d9d2c541a05af47ecab34e6
+      internalID: 891725611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_3
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 572
+        width: 256
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5078dedaa62e3dc47a34cc56456a24ea
+      internalID: -1842826564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_4
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 856
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb8bfb6796565648b4074ab31904eb0
+      internalID: 80775685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_5
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 845
+        width: 69
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a41dbf345befdc4f96693f8abbe839f
+      internalID: 327941868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_6
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 854
+        width: 88
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6d9cfd36e0a84468941a7b8c4c61e9
+      internalID: 1138059024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_7
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 643
+        width: 283
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e826383d44bd7bc44b0ea2bf81a674c9
+      internalID: 921715326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_8
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 817
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439de1ee48b02b048971a2553194e726
+      internalID: -1218609205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_9
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 828
+        width: 84
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568b0f36aaa37e747b1f84e6f13703de
+      internalID: 922576967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_10
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 781
+        width: 93
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ce9457a6e626f44b02ad7564ed0cd5
+      internalID: 1214708871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_11
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 788
+        width: 77
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41377adbe8d99244699b47faaa985b4b
+      internalID: 1861040174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_12
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 748
+        width: 76
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1b54eacdd9edb4b83184cbffc9ea71
+      internalID: -143927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_13
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 540
+        width: 293
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63e9156501ca2e499c88adffe540e53
+      internalID: 318412885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_14
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 771
+        width: 66
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c899600f019abc41ab5867d0e65510f
+      internalID: 548461276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_15
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 727
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6266fef060a66784982c892f775f5eaa
+      internalID: -1472807238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_16
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 694
+        width: 8
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bc669aacc94eb44bd8ca7cdbfcb11b
+      internalID: 1892382664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_17
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 726
+        width: 94
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95c0cf518eaa3942add226f6724582f
+      internalID: -1099643821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_18
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 711
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ac8b45371452c4aa9ab30e7a9c42f3
+      internalID: 47650615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_19
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 692
+        width: 62
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f28eae31cad21142863c3c8a2852449
+      internalID: -275392339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_20
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 683
+        width: 118
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7477b08b017b74f94620436cea7956
+      internalID: -129367928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_21
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 636
+        width: 70
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ac2533459dd0d44bcfa1f682a6d43f
+      internalID: -1274380307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_22
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 620
+        width: 105
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd59a98a5b7c2f243a26576ac4b07e0e
+      internalID: -921962526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_23
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 303
+        width: 289
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c858b55d63738d4aba5a4552471e5a8
+      internalID: -740683496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_24
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 312
+        width: 308
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58935118c7a55df43baec06cbe760ce2
+      internalID: 1881317833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 566
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b930a46162e904aaa543310f10bc1a
+      internalID: -214755451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_26
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 566
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c44f386ba7ad142869a3b07871ace3
+      internalID: 680786568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_27
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 280
+        width: 273
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999d14bd29055304e9e51055c646b949
+      internalID: 344253597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_28
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 249
+        width: 261
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af19c1a82b78894dbdece4cd856d51d
+      internalID: 1286573401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_29
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 522
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2720051560a794e93a867973537e77
+      internalID: 796169631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_30
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 519
+        width: 25
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3247a19f5d62c448850b0cce011ca26
+      internalID: 731580227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_31
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 266
+        width: 284
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0f1e044e4d98945a96310803f26e9d
+      internalID: -57787638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_32
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 245
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84eb72d1f8877d4daf6f1661db8dd9b
+      internalID: -1452620672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_33
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 309
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f552a3a2288e4f43a46170fc08b05d7
+      internalID: 24644220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_34
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 0
+        width: 338
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d17033e1dc3f9429a85d31f1c5b711
+      internalID: -1194117265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_35
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 0
+        width: 331
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3fd880c2f678049a86991f1b0567ec
+      internalID: 1720001377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_36
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 0
+        width: 314
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df93a4f1c34cd014f8b4544a8bb2aa8c
+      internalID: 657871598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_37
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 0
+        width: 268
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e106e6b5f755f9d488d1941e760501ab
+      internalID: -948713426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_38
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 133
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce8bf1210538fe44aed4179070d1e39
+      internalID: -644697104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_39
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 91
+        width: 65
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0d88466867dca42ab7c1295a1ee85c
+      internalID: 1685629337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_40
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 677
+        width: 316
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861872a67670e7749bc2563b94775e80
+      internalID: 277135323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boofly - atlas0 #30705_41
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 329
+        width: 304
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae2d0f179f776640be89a7d0d80d1fe
+      internalID: 1102515387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boofly - atlas0 #30705_0: 468607150
+      Boofly - atlas0 #30705_1: -439154383
+      Boofly - atlas0 #30705_10: 1214708871
+      Boofly - atlas0 #30705_11: 1861040174
+      Boofly - atlas0 #30705_12: -143927
+      Boofly - atlas0 #30705_13: 318412885
+      Boofly - atlas0 #30705_14: 548461276
+      Boofly - atlas0 #30705_15: -1472807238
+      Boofly - atlas0 #30705_16: 1892382664
+      Boofly - atlas0 #30705_17: -1099643821
+      Boofly - atlas0 #30705_18: 47650615
+      Boofly - atlas0 #30705_19: -275392339
+      Boofly - atlas0 #30705_2: 891725611
+      Boofly - atlas0 #30705_20: -129367928
+      Boofly - atlas0 #30705_21: -1274380307
+      Boofly - atlas0 #30705_22: -921962526
+      Boofly - atlas0 #30705_23: -740683496
+      Boofly - atlas0 #30705_24: 1881317833
+      Boofly - atlas0 #30705_25: -214755451
+      Boofly - atlas0 #30705_26: 680786568
+      Boofly - atlas0 #30705_27: 344253597
+      Boofly - atlas0 #30705_28: 1286573401
+      Boofly - atlas0 #30705_29: 796169631
+      Boofly - atlas0 #30705_3: -1842826564
+      Boofly - atlas0 #30705_30: 731580227
+      Boofly - atlas0 #30705_31: -57787638
+      Boofly - atlas0 #30705_32: -1452620672
+      Boofly - atlas0 #30705_33: 24644220
+      Boofly - atlas0 #30705_34: -1194117265
+      Boofly - atlas0 #30705_35: 1720001377
+      Boofly - atlas0 #30705_36: 657871598
+      Boofly - atlas0 #30705_37: -948713426
+      Boofly - atlas0 #30705_38: -644697104
+      Boofly - atlas0 #30705_39: 1685629337
+      Boofly - atlas0 #30705_4: 80775685
+      Boofly - atlas0 #30705_40: 277135323
+      Boofly - atlas0 #30705_41: 1102515387
+      Boofly - atlas0 #30705_5: 327941868
+      Boofly - atlas0 #30705_6: 1138059024
+      Boofly - atlas0 #30705_7: 921715326
+      Boofly - atlas0 #30705_8: -1218609205
+      Boofly - atlas0 #30705_9: 922576967
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

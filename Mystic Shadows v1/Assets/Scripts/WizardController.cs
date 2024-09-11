@@ -519,6 +519,11 @@ public class WizardController : MonoBehaviour
     {
         pState.invincible = true;
         //If exit direction is upwards
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody2D is null in WalkIntoNewScene.");
+            yield break;
+        }
         if (_exitDir.y > 0)
         {
             rb.velocity = jumpForce * _exitDir;

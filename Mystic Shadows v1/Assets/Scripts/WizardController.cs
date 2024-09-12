@@ -102,7 +102,9 @@ public class WizardController : MonoBehaviour
         {
             instance = this;
         }
-        DontDestroyOnLoad(gameObject);  
+        DontDestroyOnLoad(gameObject);
+       
+        
 
     }
 
@@ -122,6 +124,7 @@ public class WizardController : MonoBehaviour
         Mana = mana;
         manaStorage.fillAmount = Mana;
         Health = maxHealth;
+  
     }
 
     /*private void OnDrawGizmos()
@@ -136,19 +139,26 @@ public class WizardController : MonoBehaviour
     void Update()
     {
         if (pState.cutScene) return;
-        GetInputs();
+        if (pState.alive)
+        {
+            GetInputs();
+        }
+        
         UpdateJumpVariable();
         RestoreTimeScale();
 
-        if (pState.dashing) return;      
+        if (pState.dashing || pState.healing) return;
+        if (pState.alive)
+        {
+            Flip();
+            Move();
+            Heal();            
+            Jump();
+            StartDash();
+            Attack();
+        }
         FlashWhileInvincible();
-        Move();
-        Heal();
-        if (pState.healing) return;
-        Flip();
-        Jump();
-        StartDash();
-        Attack();
+
     }
 
     // recoils
@@ -443,8 +453,19 @@ public class WizardController : MonoBehaviour
     }
     public void TakeDamage(float _damage)
     {
-        Health -= Mathf.RoundToInt(_damage);
-        StartCoroutine(StopTakingDamage()); 
+        if (pState.alive)
+        {
+            Health -= Mathf.RoundToInt(_damage);
+            if(Health <= 0)
+            {
+                Health = 0;
+                StartCoroutine(Death());
+            }
+            else
+            {
+                StartCoroutine(StopTakingDamage());
+            }
+        }        
     }
 
     public int Health
@@ -538,6 +559,26 @@ public class WizardController : MonoBehaviour
         pState.cutScene = false;
     }
 
+    IEnumerator Death()
+    {
+        pState.alive = false;
+        Time.timeScale = 1f;
+        GameObject _bloodParticles = Instantiate(bloodSpurt, transform.position, Quaternion.identity);
+        Destroy(_bloodParticles, 1.5f);
+        anim.SetBool("Healing", true);
+        yield return new WaitForSeconds(0.9f);
+        StartCoroutine(UIManager.Instance.ActivateDeathScreen());
+    }
+
+    public void Respawned()
+    {
+        if (!pState.alive)
+        {
+            pState.alive = true;
+            Health = maxHealth;
+            anim.Play("Wizard_Idle");
+        }
+    }
 
 
     // it doesnt let us to heal always

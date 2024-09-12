@@ -26,7 +26,9 @@ public class Enemy : MonoBehaviour
         Fly_Idle,
         Fly_Chase,
         Fly_Stunned,
-        Fly_Death
+        Fly_Death,
+        Clown_Idle,
+        Clown_Flip
     }
 
     protected EnemyStates currentEnemyState;
@@ -92,7 +94,11 @@ public class Enemy : MonoBehaviour
         if (_other.gameObject.CompareTag("Wizard") && !WizardController.instance.pState.invincible && health>0)
         {
             Attack();
-            WizardController.instance.HitStopTime(0, 5, 0.5f);
+            if (WizardController.instance.pState.alive)
+            {
+                WizardController.instance.HitStopTime(0, 5, 0.5f);
+            }
+            
         }
     }
 
@@ -113,11 +119,6 @@ public class Enemy : MonoBehaviour
 
     protected void ChangeState(EnemyStates _newState)
     {
-        /*if (currentEnemyState != _newState)
-        {
-            Debug.Log($"Changing state from {currentEnemyState} to {_newState}");
-            currentEnemyState = _newState;
-        }*/
         GetCurrentEnemyState = _newState;  
     }
 }

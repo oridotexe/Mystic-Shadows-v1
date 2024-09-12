@@ -5,21 +5,35 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public SceneFader sceneFader;
-    public static UIManager Instance;
+
+    public static UIManager Instance { get; private set; }
+    [SerializeField] GameObject deathScreen;
+    
 
     private void Awake()
     {
-        if(Instance == null && Instance != this)
+        if (Instance == null)
         {
-            Destroy(gameObject);
+            Instance = this;
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            Instance = this;
+            Destroy(gameObject); 
         }
-        DontDestroyOnLoad(gameObject);
-        sceneFader = GetComponentInChildren<SceneFader>();
+    }
+
+    public IEnumerator ActivateDeathScreen()
+    {
+        yield return new WaitForSeconds(0.3f);
+        deathScreen.SetActive(true);
+    }
+
+    public IEnumerator DesactiveDeathScreen()
+    {
+        yield return new WaitForSeconds(0.3f);
+        deathScreen.SetActive(false);       
     }
 }
+
 

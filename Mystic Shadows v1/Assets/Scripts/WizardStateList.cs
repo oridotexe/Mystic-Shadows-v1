@@ -11,4 +11,5 @@ public class WizardStateList : MonoBehaviour
     public bool invincible;
     public bool healing;
     public bool cutScene = false;
+    public bool alive;
 }

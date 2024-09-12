@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class Worm : Enemy
+public class Mushroom : Enemy
 {
 
     float timer;
@@ -15,11 +15,11 @@ public class Worm : Enemy
     protected override void Start()
     {
         base.Start();
-        rb.gravityScale = 12f;
+        rb.gravityScale = 5f;
     }
 
     // Update is called once per frame
-    protected override void Update()
+    /*protected override void Update()
     {
         base.Update();
         if (!isRecoiling)
@@ -28,7 +28,7 @@ public class Worm : Enemy
                 (transform.position, new Vector2(WizardController.instance.transform.position.x, transform.position.y), 
                 speed * Time.deltaTime);
         }
-    }
+    }*/
 
     public override void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
     {

@@ -37,8 +37,7 @@ public class Enemy : MonoBehaviour
         set
         {
             if (currentEnemyState != value)
-            {
-                Debug.Log("nhjv"); 
+            { 
                 currentEnemyState = value;
                 ChangeCurrentAnimation();
             }

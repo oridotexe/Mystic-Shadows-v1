@@ -296,38 +296,40 @@ public class WizardController : MonoBehaviour
 
             if (yAxis == 0 || (xAxis < 0 && Grounded()))
             {
-                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilYSpeed);
+                int _recoilLeftOrRight = pState.lookingRight ? 1 : -1;
+                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, Vector2.right * _recoilLeftOrRight,  recoilYSpeed);
                 Instantiate(slashEffect, SideAttackTransform.position, Quaternion.identity);
             }
             else if (yAxis > 0)
             {
-                Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
+                Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, Vector2.up, recoilYSpeed);
                 SlashEffectAngle(slashEffect, 80, UpAttackTransform);
             }
             else if (yAxis < 0 && !Grounded())
             {
-                Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, recoilYSpeed);
+                Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, Vector2.down, recoilYSpeed);
                 SlashEffectAngle(slashEffect, -90, DownAttackTransform);
             }
         }
     }
 
-    private void Hit(Transform _attackTranform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrenght)
+    private void Hit(Transform _attackTranform, Vector2 _attackArea, ref bool _recoilBool, Vector2 _recoilDir, float _recoilStrenght)
     {
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTranform.position, _attackArea, 0, attackableLayer);
         List<Enemy> hitEnemies = new List<Enemy>();
 
         if(objectsToHit.Length > 0 )
         {
-            _recoilDir = true;
+            _recoilBool = true;
         }
 
         for (int i = 0; i < objectsToHit.Length; i++)
         {   
            Enemy e = objectsToHit[i].GetComponent<Enemy>();
+
             if(e && !hitEnemies.Contains(e))
             {
-                e.EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrenght);
+                e.EnemyHit(damage, _recoilDir, _recoilStrenght);
                 hitEnemies.Add(e);
                 if (objectsToHit[i].CompareTag("Enemy")){
                     Mana += manaGain;

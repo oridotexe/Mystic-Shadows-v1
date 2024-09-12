@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class Mushroom : Enemy
+public class Worm : Enemy
 {
 
     float timer;
@@ -37,7 +37,12 @@ public class Mushroom : Enemy
 
     protected override void UpdateEnemyStates()
     {
-        switch (currentEnemyState)
+        if (health <= 0)
+        {
+            Destroy(gameObject, 0.05f);    
+        }
+
+        switch (GetCurrentEnemyState)
         {
             case EnemyStates.Mushroom_Idle:
 

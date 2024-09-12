@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float recoilFactor;
     [SerializeField] protected bool isRecoiling = false;
 
-    [SerializeField] protected WizardController wizard;
+    protected WizardController wizard;
     [SerializeField] protected float speed;
 
     [SerializeField] protected float damage;
@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     protected float recoilTimer;
     protected Rigidbody2D rb;
     protected SpriteRenderer sr;
+    protected Animator anim;
 
     protected enum EnemyStates
     {
@@ -29,22 +30,33 @@ public class Enemy : MonoBehaviour
     }
 
     protected EnemyStates currentEnemyState;
+
+    protected virtual EnemyStates GetCurrentEnemyState
+    {
+        get { return currentEnemyState; }
+        set
+        {
+            if (currentEnemyState != value)
+            {
+                Debug.Log("nhjv"); 
+                currentEnemyState = value;
+                ChangeCurrentAnimation();
+            }
+        }
+    }
     // Start is called before the first frame update
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         wizard = WizardController.instance;
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        UpdateEnemyStates();
-        if(health <= 0)
-        {
-            Destroy(gameObject);
-        }
+  
         if (isRecoiling)
         {
             if(recoilTimer < recoilLength)
@@ -57,6 +69,10 @@ public class Enemy : MonoBehaviour
                 recoilTimer = 0;
             }
         }
+        else
+        {
+            UpdateEnemyStates();
+        }
     }
 
     public virtual void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
@@ -66,14 +82,15 @@ public class Enemy : MonoBehaviour
         // gonna follow the hit direction 
         if(!isRecoiling )
         {
-            rb.AddForce(-_hitForce * recoilFactor * _hitDirection);
-            isRecoiling=true;   
+            rb.velocity = _hitForce * recoilFactor * _hitDirection;
+            //rb.AddForce(-_hitForce * recoilFactor * _hitDirection);
+            //isRecoiling=true;   
         }
     }
 
     public void OnCollisionStay2D(Collision2D _other)
     {
-        if (_other.gameObject.CompareTag("Wizard") && !WizardController.instance.pState.invincible)
+        if (_other.gameObject.CompareTag("Wizard") && !WizardController.instance.pState.invincible && health>0)
         {
             Attack();
             WizardController.instance.HitStopTime(0, 5, 0.5f);
@@ -90,13 +107,18 @@ public class Enemy : MonoBehaviour
 
     }
 
+    protected virtual void ChangeCurrentAnimation()
+    {
+
+    }
+
     protected void ChangeState(EnemyStates _newState)
     {
-        if (currentEnemyState != _newState)
+        /*if (currentEnemyState != _newState)
         {
             Debug.Log($"Changing state from {currentEnemyState} to {_newState}");
             currentEnemyState = _newState;
-        }
-        currentEnemyState = _newState;  
+        }*/
+        GetCurrentEnemyState = _newState;  
     }
 }

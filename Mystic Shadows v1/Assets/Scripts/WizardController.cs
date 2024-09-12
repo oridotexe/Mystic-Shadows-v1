@@ -70,6 +70,7 @@ public class WizardController : MonoBehaviour
     [HideInInspector] public OnHealthChangedDelegate OnHealthChangedCallback;
     [SerializeField] float timeToHeal;
     float healTimer;
+    private float healStartTime;
     [Space(5)]
 
     [Header("Mana Settings")]
@@ -147,7 +148,7 @@ public class WizardController : MonoBehaviour
         UpdateJumpVariable();
         RestoreTimeScale();
 
-        if (pState.dashing || pState.healing) return;
+        if (pState.dashing) return;
         if (pState.alive)
         {
             Flip();
@@ -523,7 +524,7 @@ public class WizardController : MonoBehaviour
             pState.healing = true;
             anim.SetBool("Healing", true);
             //healing
-            healTimer += Time.deltaTime;
+            healTimer += Time.deltaTime * 5;
             if (healTimer >= timeToHeal)
             {
                 Health++;
@@ -533,11 +534,14 @@ public class WizardController : MonoBehaviour
         }
         else
         {
+            Debug.Log("se logroo");
             pState.healing = false;
             anim.SetBool("Healing", false);
             healTimer = 0;
+            Debug.Log("Saliendo del estado de curación. Healing: " + pState.healing);
         }
     }
+
     public IEnumerator WalkIntoNewScene(Vector2 _exitDir, float _delay)
     {
         pState.invincible = true;
@@ -565,7 +569,7 @@ public class WizardController : MonoBehaviour
         Time.timeScale = 1f;
         GameObject _bloodParticles = Instantiate(bloodSpurt, transform.position, Quaternion.identity);
         Destroy(_bloodParticles, 1.5f);
-        anim.SetBool("Healing", true);
+        anim.SetTrigger("Death");
         yield return new WaitForSeconds(0.9f);
         StartCoroutine(UIManager.Instance.ActivateDeathScreen());
     }

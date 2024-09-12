@@ -80,7 +80,7 @@ public class WizardController : MonoBehaviour
     [Space(5)]
 
     [SerializeField] GameObject bloodSpurt;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sr;
     [HideInInspector] public WizardStateList pState;

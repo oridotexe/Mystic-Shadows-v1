@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wizard
   - Enemy
+  - Death
   layers:
   - Default
   - TransparentFX

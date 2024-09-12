@@ -7,6 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public string transitionedFromScene;
+    public Vector2 platformingRespawPoint;
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
